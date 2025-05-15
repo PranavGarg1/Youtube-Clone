@@ -1,8 +1,8 @@
 const Header = () => {
   return (
-    <div className="flex justify-between p-2 mx-4 ">
+    <div className="flex justify-between p-2 shadow">
       <div className="flex">
-        <img className="h-8  m-auto "
+        <img className="h-8  m-auto cursor-pointer"
             src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-icon-download-in-svg-png-gif-file-formats--crispy-user-interface-pack-icons-462145.png?f=webp&w=256"
             alt="menu"
         />
@@ -18,7 +18,8 @@ const Header = () => {
             alt="search"
         />
       </div>
-      <div>
+      <div className="flex">
+        <button className="border-1 h-12 w-30 rounded-4xl mx-4 cursor-pointer">Create</button>
         <img className="h-8  m-auto"
             src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small_2x/user-profile-icon-free-vector.jpg"
             alt="user"
