@@ -1,8 +1,20 @@
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
+
 const Header = () => {
+
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = () =>{
+    dispatch(toggleMenu())
+  }
+
+
   return (
     <div className="flex justify-between p-2 shadow">
       <div className="flex">
         <img className="h-8  m-auto cursor-pointer"
+        onClick={()=> toggleMenuHandler()}
             src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-icon-download-in-svg-png-gif-file-formats--crispy-user-interface-pack-icons-462145.png?f=webp&w=256"
             alt="menu"
         />

@@ -1,8 +1,20 @@
+import Button from "./Button";
+
 const ButtonList = () =>{
     return(
-        <>
-            <h1>ButtonList</h1>
-        </>
+        <div className="flex">
+           <Button name="All"/>
+           <Button name="Trending"/>
+           <Button name="Subscriptions"/>
+           <Button name="Library"/>
+           <Button name="History"/>
+           <Button name="Your Videos"/>
+           <Button name="Trending"/>
+           <Button name="Subscriptions"/>
+           <Button name="Library"/>
+           <Button name="History"/>
+           <Button name="Your Videos"/>
+        </div>
     )
     }
     

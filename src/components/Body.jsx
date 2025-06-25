@@ -3,10 +3,10 @@ import SideBar from "./SideBar";
 
 const Body = () =>{
     return(
-        <>
+        <div className="flex flex-row">
             <SideBar/>
-            {/* <Main/> */}
-        </>
+            <Main/>
+        </div>
     )
     }
     

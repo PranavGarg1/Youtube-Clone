@@ -1,8 +1,28 @@
+import { useEffect , useState } from "react";
+import { YOUTUBE_VIEOS_API } from "../utils/constsants";
+import VideoCard from "./VideoCard";
+
 const VideoContainer = () =>{
+
+    const [videos, setVideos] = useState([]);   
+
+    useEffect(()=>{
+        getVideos()
+    },[])
+
+    const getVideos = async ()=>{
+        const data = await fetch(YOUTUBE_VIEOS_API);
+        const json = await data.json();
+        setVideos(json.items);
+    }
+
     return(
-        <>
-            <h1>VideoContainer</h1>
-        </>
+        <div className="flex flex-wrap">
+          {
+            videos.map((video)=> <VideoCard key={video.id} info = {video}/> )
+          }
+            
+        </div>
     )
     }
     
